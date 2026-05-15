@@ -1,124 +1,133 @@
-\# IT Support Ticket Analysis Using SQL
+# SQL IT Support Ticket Analysis
 
+## Project Overview
+This project analyzes IT support ticket operations using SQL and dummy operational data. The project was designed to simulate a real-world IT support environment by tracking ticket volume, SLA breaches, resolution performance, agent workload, and customer satisfaction.
 
+The analysis focuses on identifying operational bottlenecks, monitoring service performance, and generating business insights that can support IT service improvement initiatives.
 
-\## Project Objective
+---
 
+## Objectives
+- Analyze support ticket volume and distribution
+- Monitor SLA compliance and breach patterns
+- Evaluate average resolution time
+- Measure agent workload distribution
+- Assess customer satisfaction trends
+- Generate operational business insights using SQL
 
+---
 
-This project analyzes IT support ticket data using SQL. The goal is to identify ticket volume, resolution performance, SLA breaches, agent workload, and customer satisfaction patterns.
+## Tools & Technologies
+- SQL
+- MySQL
+- Relational Database Design
 
+---
 
+## SQL Concepts Used
+- JOINs
+- GROUP BY
+- CASE WHEN
+- Common Table Expressions (CTEs)
+- Window Functions
+- Aggregate Functions
+- Ranking Functions
 
-\## Dataset Overview
+---
 
+## Database Schema
 
+![ER Diagram](screenshots/er_diagram.png)
 
-The project uses dummy IT support ticket data with four tables:
+---
 
+## Project Structure
 
+```text
+IT-Support-Ticket-Analysis/
+│
+├── README.md
+├── schema.sql
+├── insert_data.sql
+├── analysis_queries.sql
+├── insights.md
+│
+└── screenshots/
+    ├── er_diagram.png
+    ├── full_ticket_performance_summary.png
+    ├── sla_breach_analysis.png
+    ├── agent_workload_ranking.png
+    ├── category_resolution_ranking.png
+    ├── monthly_ticket_trend.png
+    └── customer_satisfaction_analysis.png
+```
 
-\- departments
+---
 
-\- agents
+## Key Analysis & Results
 
-\- users
+### SLA Breach Analysis
+Tracks SLA compliance based on ticket priority and resolution time.
 
-\- tickets
+![SLA Breach Analysis](screenshots/sla_breach_analysis.png)
 
+---
 
+### Agent Workload Ranking
+Ranks support agents based on total tickets handled using SQL window functions.
 
-\## Tools Used
+![Agent Workload Ranking](screenshots/agent_workload_ranking.png)
 
+---
 
+### Category Resolution Time Ranking
+Identifies ticket categories with the longest average resolution time.
 
-\- MySQL
+![Category Resolution Ranking](screenshots/category_resolution_ranking.png)
 
-\- SQL
+---
 
-\- GitHub
+### Monthly Ticket Trend
+Analyzes support demand trends over time.
 
+![Monthly Ticket Trend](screenshots/monthly_ticket_trend.png)
 
+---
 
-\## Business Questions
+### Customer Satisfaction Analysis
+Measures average satisfaction score across ticket categories.
 
+![Customer Satisfaction Analysis](screenshots/customer_satisfaction_analysis.png)
 
+---
 
-1\. How many tickets were created?
+### Full Ticket Performance Summary
+Comprehensive operational summary by ticket category, including:
+- total tickets
+- SLA breaches
+- resolution time
+- customer satisfaction
 
-2\. How many tickets are resolved vs open?
+![Full Ticket Performance Summary](screenshots/full_ticket_performance_summary.png)
 
-3\. Which priority level has the most tickets?
+---
 
-4\. Which ticket categories occur most frequently?
+## Business Insights
+- High-priority tickets experienced the highest SLA breach rate
+- Certain ticket categories required significantly longer resolution time
+- Workload distribution between agents was uneven
+- Categories with longer resolution time generally showed lower customer satisfaction
+- Ticket volume trends may indicate recurring operational issues
 
-5\. What is the average resolution time?
+---
 
-6\. Which categories have the lowest satisfaction score?
+## Future Improvements
+- Add Power BI dashboard visualization
+- Integrate larger datasets
+- Implement stored procedures and triggers
+- Add predictive ticket trend analysis using Python
 
-7\. Which agents handled the most tickets?
+---
 
-8\. Which tickets breached SLA?
-
-9\. Which ticket categories create the highest operational risk?
-
-
-
-\## SQL Skills Demonstrated
-
-
-
-\- SELECT
-
-\- WHERE
-
-\- JOIN
-
-\- GROUP BY
-
-\- ORDER BY
-
-\- COUNT
-
-\- SUM
-
-\- AVG
-
-\- CASE WHEN
-
-\- Common Table Expressions, also known as CTEs
-
-\- Window functions
-
-\- SLA business logic
-
-
-
-\## Key Insights
-
-
-
-\- High-priority tickets require more attention because they tend to have longer resolution times.
-
-\- System Error, Server Issue, and Network Down categories should be reviewed because they are linked to longer resolution times and lower satisfaction.
-
-\- SLA breach analysis helps identify where support processes need improvement.
-
-\- Agent workload analysis helps management understand whether ticket distribution is balanced.
-
-
-
-\## Business Recommendations
-
-
-
-1\. Review recurring high-priority issues to reduce operational disruption.
-
-2\. Improve escalation processes for Server Issue and System Error tickets.
-
-3\. Monitor SLA breaches weekly.
-
-4\. Balance workload across support agents.
-
-5\. Create user guides for repeated issues such as Password Reset and Email Issue.
-
+## Author
+Ash — Data Analytics Graduate focused on SQL, Business Intelligence, and IT Analytics.
