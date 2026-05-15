@@ -37,7 +37,7 @@ The analysis focuses on identifying operational bottlenecks, monitoring service 
 
 ## Database Schema
 
-![ER Diagram](screenshots/er_diagram.png)
+![ER Diagram](er_diagram.png)
 
 ---
 
